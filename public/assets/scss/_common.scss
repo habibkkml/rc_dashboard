@@ -31,12 +31,14 @@
     box-sizing: border-box;
 }
 body {
+    position: relative;
     background-color: $background;
     color: $textPrimary;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    overflow-x: hidden;
 }
 .ml-30 {
     margin-left: 30px;
@@ -86,7 +88,9 @@ body {
         color: $textSecondary;
     }
 }
-
+.border-right {
+    border-right: 1px solid $background;
+}
 .section__title {
     h3 {
         position: relative;

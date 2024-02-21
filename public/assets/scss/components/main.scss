@@ -1,4 +1,9 @@
 .content {
+    @include small-desktop {
+        height: calc(100vh - 15rem);
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
     &__top {
         padding-left: 5rem;
         padding-right: 1.5rem;
@@ -7,10 +12,30 @@
             padding-left: 3rem;
             padding-bottom: 3rem;
         }
+        @include tablet {
+            padding: 1.5rem;
+        }
         &--title {
             padding: 2rem 2rem 2rem 0;
+            @include tablet {
+                position: relative;
+                padding: 0;
+                padding-bottom: 1rem;
+                &::before {
+                    position: absolute;
+                    content: "";
+                    width: 100%;
+                    height: 1px;
+                    background: #e9e9e9;
+                    bottom: 0;
+                }
+            }
             &--left {
                 padding-right: 5.3rem;
+                @include tablet {
+                    width: 100% !important;
+                    padding-right: 0;
+                }
                 h2 {
                     margin-bottom: 0;
                     font-size: 3.6rem;
@@ -22,6 +47,10 @@
                         font-size: 3.2rem;
                         line-height: 3.8rem;
                     }
+                    @include tablet {
+                        font-size: 2.6rem;
+                        line-height: 3.3rem;
+                    }
                     &::before {
                         @extend %beforeAfter;
                         bottom: -2rem;
@@ -29,6 +58,9 @@
                         width: 100%;
                         height: 1px;
                         background-color: #e9e9e9;
+                        @include tablet {
+                            content: none;
+                        }
                     }
                 }
             }
@@ -45,6 +77,17 @@
                 width: 1px;
                 height: 100%;
             }
+            @include tablet {
+                flex-wrap: wrap;
+                &::before {
+                    content: none;
+                }
+            }
+            .rideInfo {
+                @include tablet {
+                    width: auto !important;
+                }
+            }
             .main {
                 &__left {
                     h3 {
@@ -58,8 +101,15 @@
                             font-size: 3.5rem;
                             line-height: 4rem;
                         }
+                        @include tablet {
+                            font-size: 2.5rem;
+                            line-height: 3rem;
+                        }
                     }
                     .rideInfo {
+                        @include tablet {
+                            width: auto !important;
+                        }
                         &__top {
                             margin-bottom: 2rem;
                             h4 {
@@ -70,8 +120,15 @@
                                 @include medium-desktop {
                                     font-size: 3rem;
                                 }
+                                @include tablet {
+                                    font-size: 2rem;
+                                }
+                            }
+                            button {
+                                line-height: 1;
                             }
                         }
+
                         &__bottom {
                             &--content {
                                 color: $textSecondary;
@@ -83,6 +140,9 @@
                                     @include medium-desktop {
                                         font-size: 1.6rem;
                                     }
+                                    @include tablet {
+                                        font-size: 1.2rem;
+                                    }
                                 }
                                 span {
                                     display: inline-block;
@@ -93,6 +153,11 @@
                                     @include medium-desktop {
                                         font-size: 2rem;
                                         line-height: 2.4rem;
+                                    }
+                                    @include tablet {
+                                        font-size: 1.6rem;
+                                        line-height: 2rem;
+                                        margin-left: 5px;
                                     }
                                 }
                             }
@@ -108,6 +173,9 @@
                         @include medium-desktop {
                             font-size: 1.8rem;
                             line-height: 2rem;
+                        }
+                        @include tablet {
+                            font-size: 1.6rem;
                         }
                     }
                     &--img {
@@ -135,12 +203,21 @@
                     font-size: 1.8rem;
                     line-height: 2.2rem;
                 }
+                @include tablet {
+                    font-size: 1.6rem;
+                    margin-top: 20px;
+                    line-height: 1.8rem;
+                }
             }
         }
         .userInfo {
             padding-left: 3rem;
             @include medium-desktop {
                 padding-left: 2rem;
+            }
+            @include tablet {
+                padding-left: 0;
+                margin-top: 2rem;
             }
             &__title {
                 margin-bottom: 3rem;
@@ -152,12 +229,20 @@
                     margin-bottom: 2.5rem;
                     line-height: 2.5rem;
                 }
+                @include tablet {
+                    font-size: 1.6rem;
+                    margin-bottom: 1.5rem;
+                    line-height: 1;
+                }
                 i {
                     margin-right: 20px;
                     font-size: 2.2rem;
                     @include medium-desktop {
                         font-size: 1.8rem;
                         margin-right: 1.5rem;
+                    }
+                    @include tablet {
+                        font-size: 1.4rem;
                     }
                 }
             }
@@ -253,6 +338,10 @@
             height: 100%;
             padding-bottom: 3rem;
             overflow-y: auto;
+            @include tablet {
+                height: auto;
+                padding-bottom: 0;
+            }
             .note {
                 &__title {
                     display: flex;
@@ -280,6 +369,9 @@
                     margin-top: 0.5rem;
                     max-height: 40rem;
                     height: 100%;
+                    @include tablet {
+                        height: auto;
+                    }
                     p {
                         font-size: 1.5rem;
                     }
@@ -288,6 +380,9 @@
         }
         &--right {
             padding: 3rem 2.5rem;
+            @include tablet {
+                margin-top: 1.5rem;
+            }
         }
         &--item {
             .input__list {

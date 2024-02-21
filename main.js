@@ -8,19 +8,24 @@ function menuTrigger() {
 }
 menuTriggerBtn.addEventListener("click", menuTrigger);
 
-// End Menu Trigger for normal menu
-
 // Header sticky
 var header = document.getElementById("header");
 
-// Add an event listener to the window object to listen for scroll events
 window.onscroll = function () {
-  // Check if the user has scrolled down by at least 100 pixels
-  if (window.scrollY > 100) {
-    // Add the "fixed" class to the header
+  if (window.scrollY > 70) {
     header.classList.add("sticky");
   } else {
-    // Remove the "fixed" class from the header
     header.classList.remove("sticky");
   }
 };
+
+// Sidebar Trigger
+// Menu Trigger for Normal Menu
+let sideMenu = document.getElementById("sidebar");
+let sideMenuBtn = document.getElementById("mobile-menu");
+let body = document.getElementsByTagName("body")[0];
+function sideMenuTrigger() {
+  body.classList.toggle("sidebar-shadow");
+  sideMenu.classList.toggle("sidebar-active");
+}
+sideMenuBtn.addEventListener("click", sideMenuTrigger);
