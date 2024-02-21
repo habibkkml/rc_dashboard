@@ -1,9 +1,9 @@
+name: 🚀 Deploy website on push
+
 on:
   push:
     branches:
       - habib
-
-name: 🚀 Deploy website on push
 
 jobs:
   web-deploy:
@@ -17,6 +17,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '20'
+
       - name: 🔨 Build Project
         run: |
           npm install
@@ -27,6 +28,6 @@ jobs:
         with:
           server: "ftp.devhabib.com"
           username: "devhabib@rc.devhabib.com"
-          password: "${{ secrets.PASSWORD }}"
+          password: "${{ secrets.FTP_PASSWORD }}"
           protocol: "ftp"
           local-dir: ./dist/
