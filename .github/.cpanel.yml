@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - master
+      - habib
 
 name: 🚀 Deploy website on push
 
