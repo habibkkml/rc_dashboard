@@ -35,10 +35,9 @@
         @include medium-desktop {
             overflow: hidden;
             max-height: 0;
+            flex-direction: column-reverse;
         }
         &.menu-active {
-            display: flex;
-            flex-direction: column-reverse;
             max-height: 100vh;
             overflow-y: auto;
         }

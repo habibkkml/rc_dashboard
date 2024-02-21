@@ -1,0 +1,17 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 999;
+    box-shadow: 0 0 5px 0px rgba($color: #000000, $alpha: 0.4);
+    ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        li {
+        }
+    }
+}
