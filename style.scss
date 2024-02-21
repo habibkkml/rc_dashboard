@@ -1,0 +1,11 @@
+// Flaticons
+@import "@flaticon/flaticon-uicons/css/all/all.css";
+// Bootstrap
+@import "bootstrap/dist/css/bootstrap.min.css";
+// Helpers
+@import "./public/assets/scss/variables", "./public/assets/scss/mixins", "./public/assets/scss/common";
+
+// Header
+@import "./public/assets/scss/components/header";
+@import "./public/assets/scss/components/sidebar";
+@import "./public/assets/scss/components/main";

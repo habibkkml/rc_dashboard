@@ -1,0 +1,173 @@
+.header {
+    background-color: $white;
+    width: 100%;
+    z-index: 999;
+    transition: all 0.3s cubic-bezier(0.63, -0.72, 0, 1.52);
+    &.sticky {
+        position: sticky;
+        top: 0;
+        @extend %transition;
+    }
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.8rem 0;
+        @include medium-desktop {
+            display: block;
+            padding: 10px 0;
+        }
+    }
+    &__logo {
+        a {
+            text-decoration: none;
+            display: block;
+            width: 16rem;
+            img {
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+    &__nav {
+        display: flex;
+        @extend %transition;
+        @include medium-desktop {
+            overflow: hidden;
+            max-height: 0;
+        }
+        &.menu-active {
+            display: flex;
+            flex-direction: column-reverse;
+            max-height: 100vh;
+            overflow-y: auto;
+        }
+        .bookRide {
+            margin-right: 3.2rem;
+            @include medium-desktop {
+                margin-right: 0;
+                margin-top: 2rem;
+            }
+        }
+
+        &--menu {
+            display: flex;
+            align-items: center;
+            @include medium-desktop {
+                display: block;
+            }
+            li {
+                margin-right: 25px;
+                z-index: 1;
+                @include medium-desktop {
+                    padding: 0;
+                    padding-top: 10px;
+                }
+
+                a {
+                    position: relative;
+                    display: block;
+                    color: $navText;
+                    font-size: 1.2rem;
+                    text-decoration: none;
+                    @extend %transition;
+
+                    @include medium-desktop {
+                        display: inline-block;
+                        font-size: 1.3rem;
+                    }
+                    &::before {
+                        @extend %beforeAfter;
+                        bottom: -29px;
+                        left: 0;
+                        width: 0;
+                        height: 3px;
+                        border-radius: 50px;
+                        background-color: $primaryColor;
+                        @extend %transition;
+                    }
+
+                    &:hover {
+                        @extend %textColorHover;
+                        font-weight: 700;
+                        &::before {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        &--user {
+            @extend %transition;
+            @include medium-desktop {
+                flex-direction: row-reverse;
+                justify-content: space-between;
+            }
+            .notification {
+                margin-right: 25px;
+                @include medium-desktop {
+                    margin-right: 0;
+                }
+            }
+            &--img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                overflow: hidden;
+                margin-right: 5px;
+                flex-direction: row;
+                img {
+                    width: 100%;
+                }
+            }
+            span {
+                font-size: 1.2rem;
+                @include medium-desktop {
+                    font-size: 1.3rem;
+                }
+            }
+            &:hover {
+                @extend %textColorHover;
+            }
+        }
+    }
+    &__btn {
+        padding: 0.5rem;
+        font-size: 1.3rem;
+        line-height: 1;
+        @extend %transition;
+        @include medium-desktop {
+            font-size: 1.4rem;
+        }
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+        &:hover {
+            @extend %textColorHover;
+        }
+    }
+    &__trigger {
+        display: none;
+        @include medium-desktop {
+            display: block;
+            position: fixed;
+            right: 20px;
+            top: 15px;
+            z-index: 701;
+        }
+        button {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            color: $textSecondary;
+            font-size: 2rem;
+            cursor: pointer;
+            &:focus {
+                outline: none;
+            }
+            i {
+                display: flex;
+            }
+        }
+    }
+}

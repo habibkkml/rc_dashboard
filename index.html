@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RideCentric</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- Start: Header -->
+    <header class="header" id="header">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="header__inner">
+              <!-- Start: Logo -->
+              <div class="header__logo">
+                <a href="#">
+                  <img src="./public/assets/img/logo.svg" alt="RideCentric">
+                </a>
+              </div>
+              <!-- End: Logo -->
+              <nav class="header__nav" id="menuItem">
+                <!-- First Button -->
+                <button class="primary__btn bookRide">Quote/Book Ride</button>
+                <!-- Nav Menu -->
+                <ul class="header__nav--menu p-0 m-0 list-unstyled">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Profile</a></li>
+                  <li><a href="#">My Rides</a></li>
+                  <li><a href="#">Payment Options</a></li>
+                  <li><a href="#">Reward Management</a></li>
+                </ul>
+                <!-- Notifications -->
+
+                <!-- Users -->
+                <div class="header__nav--user d-flex align-items-center">
+                  <div class="notification">
+                    <button class="header__btn bg-transparent border-0"><i class="fi fi-rr-watch-smart"></i></button>
+                    <button class="header__btn bg-transparent border-0"><i class="fi fi-rr-bell"></i></button>
+                  </div>
+                  <div class="header__nav--user--single d-flex align-items-center">
+                    <div class="header__nav--user--img">
+                      <img src="./public/assets/img/userIcon.png" alt="User Name"
+                        class="w-40 img-fluid object-fit-contain" />
+                    </div>
+                    <span>Thehossain Arafat</span>
+                  </div>
+                </div>
+              </nav>
+              <div class="header__trigger">
+                <button id="menuTriggerBtn" name="normal_btn" title="Menu1">
+                  <i class="fi fi-rr-menu-burger"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- End: Header -->
+    <main class="mt-4">
+      <div class="container-fluid">
+        <div class="row align-items-stretch">
+          <!-- Start: Sidebar -->
+          <div class="col-lg-4">
+            <aside class="sidebar bg-white p-4 rounded h-100">
+              <!-- Start: Sideba Top -->
+              <div class="section__title d-flex justify-content-between align-items-center mb-4">
+                <h3 class="fw-bold m-0">Route Details</h3>
+                <button class="bg-transparent border-0 p-0">
+                  <i class="fi fi-rr-compress"></i>
+                </button>
+              </div>
+              <div class="sidebar__map mt-4">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d116838.33031954223!2d90.3230295590764!3d23.775968937985198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e0!4m3!3m2!1d23.727009!2d90.42194549999999!4m5!1s0x3755c6556f8d0183%3A0xaad698adc3e0f420!2sDOHS%20Baridhara%2C%20Dhaka!3m2!1d23.8125614!2d90.4131072!5e0!3m2!1sen!2sbd!4v1708462828174!5m2!1sen!2sbd"
+                  width="100%" height="150" style="border:0; border-radius: 5px;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="sidebar__map--details d-flex justify-content-end mt-2">
+                  <span>12 km/ 7.45 mi.</span>
+                  <span>est. 20 min</span>
+                </div>
+              </div>
+              <!-- End: Sideba Top -->
+
+              <!-- Start: Sidebar bottom -->
+              <div class="sidebar__bottom">
+                <div class="section__title--small">
+                  <h3>Route</h3>
+                </div>
+                <div class="sidebar__bottom--timeline">
+                  <ul class="list-unstyled sidebar__bottom--timeline--left p-0 m-0">
+                    <!--Start: Timeline -->
+                    <li class="pickup d-flex">
+                      <div class="timeline__left flex-grow-1">
+                        <div class="sidebar__bottom--timeline--title">
+                          <h6>PICK-UP</h6>
+                        </div>
+                        <p class="sidebar__bottom--timeline--name">Dallas Fort Worth Airport</p>
+                        <p class="sidebar__bottom--timeline--post">Dallas, TX 75201</p>
+                        <div
+                          class="sidebar__bottom--timeline--travel d-flex justify-content-between align-items-center successIcon">
+                          <p class="travel__label mb-0">Flight: <span>AA 751</span> (From DEN)</p>
+                          <i class="fi fi-rr-plane-arrival"></i>
+                        </div>
+                        <div class="sidebar__bottom--timeline--notes">
+                          <label for="notes">Notes: </label> <span>Baggage Claim meet.....</span> <button
+                            class="bg-transparent p-0 border-0">See more</button>
+                        </div>
+                      </div>
+                      <div class="timeline__right">
+                        <ul
+                          class="sidebar__bottom--btns d-flex flex-column justify-content-between list-unstyled p-0 m-0">
+                          <li>
+                            <button class="bg-transparent border-0 edit-btn"><i
+                                class="fi fi-rr-pen-square"></i></button>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+
+                    <li class="stop d-flex">
+                      <div class="timeline__left flex-grow-1">
+                        <div class="sidebar__bottom--timeline--title">
+                          <h6>Stop</h6>
+                        </div>
+                        <p class="sidebar__bottom--timeline--name">Hilton Hotel, Downtown Dallas</p>
+                        <p class="sidebar__bottom--timeline--post">4517 Washington Ave.</p>
+                        <div
+                          class="sidebar__bottom--timeline--travel d-flex justify-content-between align-items-center successIcon">
+                          <p class="travel__label mb-0">Manchester, TX 75201 <i class="fi fi-rr-phone-call ml-30"></i>
+                          </p>
+                        </div>
+                        <div class="sidebar__bottom--timeline--notes">
+                          <label for="notes">Notes: </label> <span>Please look over to the.....</span> <button
+                            class="bg-transparent p-0 border-0">See more</button>
+                        </div>
+                      </div>
+                      <div class="timeline__right">
+                        <ul
+                          class="sidebar__bottom--btns d-flex flex-column justify-content-between list-unstyled p-0 m-0">
+                          <li>
+                            <button class="bg-transparent border-0 edit-btn"><i
+                                class="fi fi-rr-pen-square"></i></button>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+
+                    <li class="dropoff d-flex">
+                      <div class="timeline__left flex-grow-1">
+                        <div class="sidebar__bottom--timeline--title pickup">
+                          <h6>drop-off</h6>
+                        </div>
+                        <p class="sidebar__bottom--timeline--name">Dallas Fort Worth Airport</p>
+                        <p class="sidebar__bottom--timeline--post">Dallas, TX 75201</p>
+                        <div
+                          class="sidebar__bottom--timeline--travel d-flex justify-content-between align-items-center dropIcon">
+                          <p class="travel__label mb-0">Flight: <span>AA 751</span> (To DEN)</p>
+                          <i class="fi fi-rr-plane-departure"></i>
+                        </div>
+                        <div class="sidebar__bottom--timeline--notes">
+                          <label for="notes">Notes: </label> <span>Please look over to the.....</span> <button
+                            class="bg-transparent p-0 border-0">See more</button>
+                        </div>
+                      </div>
+                      <div class="timeline__right">
+                        <ul
+                          class="sidebar__bottom--btns d-flex flex-column justify-content-between list-unstyled p-0 m-0">
+                          <li>
+                            <button class="bg-transparent border-0 edit-btn"><i
+                                class="fi fi-rr-pen-square"></i></button>
+                          </li>
+                          <li>
+                            <button class="bg-transparent border-0"><i
+                                class="fi fi-rs-grip-dots-vertical success-color"></i></button>
+                          </li>
+                          <li>
+                            <button class="bg-transparent border-0"><i class="fi fi-rr-trash"></i></button>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+
+                    <li class="addStop d-flex">
+                      <div class="timeline__left flex-grow-1">
+                        <button class="bg-transparent p-0 success-color fw-bold border-0 add-btn">Add Stop</button>
+                      </div>
+
+                    </li>
+
+
+                    <!-- End: Timeline -->
+                  </ul>
+
+                </div>
+              </div>
+              <!-- End: Sidebar bottom -->
+            </aside>
+          </div>
+          <!-- End: Sidebar -->
+
+          <!-- Start: Main Content -->
+          <div class="col-lg-8">
+            <section class="content">
+              <!-- Start: Main content top -->
+              <div class="content__top bg-white rounded">
+                <div class="content__top--title">
+                  <div class="content__top--title--left w-50 d-flex align-items-center justify-content-between">
+                    <h2>25 April 2022</h2>
+                    <button class="bg-transparent border-0 edit-btn"><i class="fi fi-rr-pen-square"></i></button>
+                  </div>
+                </div>
+                <div class="content__top--main d-flex">
+                  <!-- Left content -->
+                  <div class="rideInfo w-50">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="main__left">
+                        <h3>8:15 PM</h3>
+                        <div class="rideInfo">
+                          <div class="rideInfo__top d-flex">
+                            <h4>SUV</h4>
+                            <button class="bg-transparent border-0 edit-btn ml-30"><i
+                                class="fi fi-rr-pen-square"></i></button>
+                          </div>
+                          <div class="rideInfo__bottom d-flex">
+                            <div class="rideInfo__bottom--content">
+                              <i class="fi fi-rr-user"></i>
+                              <span>5</span>
+                            </div>
+                            <div class="rideInfo__bottom--content">
+                              <i class="fi fi-rr-suitcase-alt"></i>
+                              <span>1</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="main__right text-center">
+                        <p>Hourly (4)</p>
+                        <div class="main__right--img">
+                          <img src="./public/assets/img/suv.png" alt="SUV">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="rideId">
+                      <p>Ride# <span>94534085</span></p>
+                    </div>
+                  </div>
+
+                  <!-- Right Content -->
+                  <div class="userInfo">
+                    <h4 class="userInfo__title d-flex justify-content-start">
+                      <i class="fi fi-rr-user"></i>
+                      <span>Cameron Williamson Davis</span>
+                    </h4>
+                    <ul class="userInfo__contact list-unstyled">
+                      <li>
+                        <a href="tel:+1 469-939-5330" target="_top">
+                          <i class="fi fi-rr-phone-call"></i>
+                          <span>+1 469-939-5330</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="mailto:cameron@gmail.com" target="_top">
+                          <i class="fi fi-rr-envelope"></i>
+                          <span>cameron@gmail.com</span>
+                        </a>
+                      </li>
+                    </ul>
+                    <div class="userInfo__bottom">
+                      <div class="userInfo__bottom--title">
+                        <h5>Add’l Passenger (2)</h5>
+                        <button class="bg-transparent p-0 border-0"><i class="fi fi-rr-square-plus"></i></button>
+                        <div class="line"></div>
+                        <button class="bg-transparent p-0 border-0"><i class="fi fi-rr-angle-small-down"></i></button>
+                      </div>
+                      <div class="userInfo__bottom--users d-flex">
+                        <div class="userInfo__single d-flex align-items-center">
+                          <p class="mb-0">
+                            <i class="fi fi-rr-user"></i>
+                            <span>Anthony Davis</span>
+                          </p>
+                          <button class="bg-transparent border-0 p-0">
+                            <i class="fi fi-rr-cross-small"></i>
+                          </button>
+                        </div>
+                        <span class="bar">|</span>
+                        <div class="userInfo__single d-flex align-items-center">
+                          <p class="mb-0">
+                            <i class="fi fi-rr-user"></i>
+                            <span>Joan Kremer</span>
+                          </p>
+                          <button class="bg-transparent border-0 p-0">
+                            <i class="fi fi-rr-cross-small"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End: Main content top -->
+
+              <!-- Start: Main Content Bottom -->
+              <div class="content__bottom mt-4">
+                <div class="row g-0 gx-4 align-items-stretch">
+                  <div class="col-6">
+                    <div class="content__bottom--left bg-white rounded px-4 h-100">
+                      <div class="section__title d-flex justify-content-between align-items-center mb-4">
+                        <h3 class="fw-bold m-0">Special Instructions</h3>
+                        <button class="bg-transparent border-0 p-0">
+                          <i class="fi fi-rr-compress"></i>
+                        </button>
+                      </div>
+                      <div class="content__bottom--note h-100">
+                        <div class="note__title">
+                          <p>Chauffeur Note</p>
+                          <span class="bar-horizontal"></span>
+                        </div>
+                        <div class="note__description">
+                          <p>BABY CAR SEAT NEEDED!
+                            <br /> <br />
+                            Please make sure the water is cold. Thank you
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="content__bottom--right bg-white rounded px-4">
+                      <div class="section__title d-flex justify-content-between align-items-center mb-4">
+                        <h3 class="fw-bold m-0">Add’l Services & Fare Details </h3>
+                      </div>
+                      <div class="content__bottom--item">
+                        <ul class="input__list list-unstyled p-0 m-0">
+                          <li>
+                            <label for="input">Services</label>
+                            <input type="text" placeholder="Additional Services" />
+                          </li>
+                          <li>
+                            <label for="input">Charge</label>
+                            <input type="text" placeholder="Charge Details" />
+                          </li>
+                          <li>
+                            <label for="input">Amount</label>
+                            <input type="text" placeholder="Amount" />
+                          </li>
+                          <li>
+                            <button>
+                              <i class="fi fi-rr-add"></i>
+                            </button>
+                          </li>
+                        </ul>
+                        <div class="content__bottom--amount">
+                          <ul class="list-unstyled singleAmount">
+                            <li>
+                              <div class="title">Fare</div>
+                              <div class="amount"> $35.09</div>
+                            </li>
+                            <li>
+                              <div class="title">Regulatory Fee</div>
+                              <div class="amount">$35.09</div>
+                            </li>
+                            <li>
+                              <div class="title">Airport Fee</div>
+                              <div class="amount">$35.09</div>
+                            </li>
+                            <li>
+                              <div class="title">Seat Fee</div>
+                              <div class="amount">$61.09</div>
+                            </li>
+                          </ul>
+                          <span class="bar"></span>
+                          <ul class="list-unstyled totalAmount">
+                            <li class="totalAmount__heading">Estimated Total</li>
+                            <li class="totalAmount__value">$120.45</li>
+                          </ul>
+                          <ul class="list-unstyled saveDetails d-flex align-items-center justify-content-between">
+                            <li>
+                              <a href="#">Save as Quote</a>
+                            </li>
+                            <li>
+                              <button class="primary__btn">Reserve</button>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End: Main Content Bottom -->
+            </section>
+          </div>
+          <!-- End: Main Content -->
+        </div>
+      </div>
+    </main>
+    <script type="text/javascript" src="bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="/main.js"></script>
+  </body>
+
+</html>

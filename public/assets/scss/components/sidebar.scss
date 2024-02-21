@@ -1,0 +1,145 @@
+.sidebar {
+    height: 100%;
+    &__map {
+        &--details {
+            span {
+                font-style: 1.4rem;
+                font-weight: 700;
+                color: $textSecondary;
+                &:first-child {
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+    &__bottom {
+        margin-top: 2rem;
+        &--timeline {
+            // max-height: calc(100vh - 10rem);
+            padding-bottom: 2rem;
+            overflow-y: auto;
+            &--left {
+                li {
+                    position: relative;
+                    padding-left: 2.6rem;
+                    z-index: 1;
+                    &:not(:last-child) {
+                        margin-bottom: 3rem;
+                        &::after {
+                            @extend %beforeAfter;
+                            left: 0.6rem;
+                            height: calc(100% + 2rem);
+                            top: 1.5rem;
+                            background: #979797;
+                            width: 1px;
+
+                            z-index: -2;
+                        }
+                    }
+                    &::before {
+                        @extend %beforeAfter;
+                        left: 0;
+                        top: 4px;
+                        width: 1.3rem;
+                        height: 1.3rem;
+                        border-radius: 50%;
+                        background-color: $white;
+                        border: 3px solid;
+                        z-index: -1;
+                    }
+
+                    &.pickup {
+                        &::before {
+                            border-color: $primaryColor;
+                        }
+                    }
+                    &.stop {
+                        &::before {
+                            border-color: $stop;
+                        }
+                    }
+                    &.dropoff {
+                        &::before {
+                            border-color: $drop;
+                        }
+                    }
+                    &.addStop {
+                        &::before {
+                            border-color: $secondaryColor;
+                        }
+                    }
+                }
+                .add-btn {
+                    @extend %leftSidebarFonts;
+                    color: $primaryColor;
+                }
+            }
+            &--title {
+                h6 {
+                    @extend %leftSidebarFonts;
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                    margin-bottom: 3px;
+                    color: $secondaryColor;
+                    text-transform: uppercase;
+                }
+            }
+            &--name {
+                @extend %leftSidebarFonts;
+            }
+            &--post {
+                @extend %leftSidebarFonts;
+            }
+            &--travel {
+                @extend %leftSidebarFonts;
+                padding-right: 2rem;
+                &.successIcon {
+                    i {
+                        color: $primaryColor;
+                    }
+                }
+                &.dropIcon {
+                    i {
+                        color: $drop;
+                    }
+                }
+                .travel__label {
+                    span {
+                        color: $primaryColor;
+                    }
+                    .fi-rr-phone-call {
+                        color: $secondaryColor;
+                    }
+                }
+            }
+            &--notes {
+                @extend %leftSidebarFonts;
+                label {
+                    font-weight: 700;
+                }
+                button {
+                    color: $primaryColor;
+                }
+            }
+        }
+        .timeline__right {
+            margin-left: 1rem;
+
+            li {
+                margin-bottom: 0;
+                padding: 0;
+                &::before,
+                &::after {
+                    content: none;
+                }
+            }
+        }
+        &--btns {
+            height: 100%;
+            button {
+                font-size: 1.4rem;
+                color: $textSecondary;
+            }
+        }
+    }
+}
