@@ -27,6 +27,6 @@ jobs:
         with:
           server: "ftp.devhabib.com"
           username: "devhabib@rc.devhabib.com"
-          password: "${{ secrets.FTP_PASS }}"
+          password: "${{ secrets.PASSWORD }}"
           protocol: "ftp"
           local-dir: ./dist/
