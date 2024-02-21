@@ -98,7 +98,6 @@
             }
         }
         &--user {
-            @extend %transition;
             @include medium-desktop {
                 flex-direction: row-reverse;
                 justify-content: space-between;
@@ -126,8 +125,11 @@
                     font-size: 1.3rem;
                 }
             }
-            &:hover {
-                @extend %textColorHover;
+            &--single {
+                @extend %transition;
+                &:hover {
+                    @extend %textColorHover;
+                }
             }
         }
     }
