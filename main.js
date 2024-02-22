@@ -1,5 +1,4 @@
 import "./style.scss";
-// Import our custom CSS
 
 // Menu Trigger for Normal Menu
 let menuItem = document.getElementById("menuItem");
@@ -21,7 +20,6 @@ window.onscroll = function () {
 };
 
 // Sidebar Trigger
-// Menu Trigger for Normal Menu
 let sideMenu = document.getElementById("sidebar");
 let sideMenuBtn = document.getElementById("mobile-menu");
 let body = document.getElementsByTagName("body")[0];
