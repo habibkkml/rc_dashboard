@@ -1,7 +1,8 @@
 // Flaticons
 @import "@flaticon/flaticon-uicons/css/all/all.css";
 // Bootstrap
-@import "bootstrap/dist/css/bootstrap.min.css";
+// Import all of Bootstrap's CSS
+@import "bootstrap/scss/bootstrap";
 // Helpers
 @import "./public/assets/scss/variables", "./public/assets/scss/mixins", "./public/assets/scss/common";
 

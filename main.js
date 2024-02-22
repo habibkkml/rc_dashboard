@@ -1,4 +1,5 @@
 import "./style.scss";
+// Import our custom CSS
 
 // Menu Trigger for Normal Menu
 let menuItem = document.getElementById("menuItem");
